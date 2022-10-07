@@ -75,7 +75,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
         backgroundColor: Color(0xff0A192F),
         body: SingleChildScrollView(
-          physics: ScrollPhysics(),
+          physics: BouncingScrollPhysics(),
           primary: true,
           scrollDirection: Axis.vertical,
           child: Column(
@@ -149,11 +149,10 @@ class _HomePageState extends State<HomePage> {
                               color: Color(0xff0A192F),
                               borderRadius: BorderRadius.circular(6.0),
                             ),
-                            child: FlatButton(
-                              hoverColor: Color(0xFF3E0449),
+                            child: ElevatedButton(
                               onPressed: () {
                                 method.launchURL(
-                                    "https://drive.google.com/file/d/1yHLcrN5pCUGIeT8SrwC2L95Lv0MVbJpx/view?usp=sharing");
+                                    "https://drive.google.com/file/d/1q45UImfAvgDSlKAyhJOHpx9NkaKPrVI3/view?usp=sharing");
                               },
                               child: Padding(
                                 padding: const EdgeInsets.symmetric(
@@ -189,21 +188,14 @@ class _HomePageState extends State<HomePage> {
                             color: Color(0xffffA8B2D1),
                             iconSize: 16.0,
                             onPressed: () {
-                              method.launchURL("https://github.com/champ96k");
-                            }),
-                        IconButton(
-                            icon: FaIcon(FontAwesomeIcons.twitter),
-                            color: Color(0xffffA8B2D1),
-                            iconSize: 16.0,
-                            onPressed: () {
-                              method.launchURL("https://twitter.com/champ_96k");
+                              method.launchURL("https://github.com/zohaib1313");
                             }),
                         IconButton(
                           icon: FaIcon(FontAwesomeIcons.linkedin),
                           color: Color(0xffffA8B2D1),
                           onPressed: () {
                             method.launchURL(
-                                "https://www.linkedin.com/in/tushar-nikam-a29a97131/");
+                                "https://www.linkedin.com/in/zohaib1313/");
                           },
                           iconSize: 16.0,
                         ),
@@ -258,7 +250,7 @@ class _HomePageState extends State<HomePage> {
                                     height: 6.0,
                                   ),
                                   CustomText(
-                                    text: "Tushar Nikam.",
+                                    text: "Muhammad Zohaib",
                                     textsize: 68.0,
                                     color: Color(0xffCCD6F6),
                                     fontWeight: FontWeight.w900,
@@ -268,7 +260,7 @@ class _HomePageState extends State<HomePage> {
                                   ),
                                   CustomText(
                                     text:
-                                        "I build things for the Android and web.",
+                                        "I build things for the Android ,IOS and web.",
                                     textsize: 56.0,
                                     color: Color(0xffCCD6F6).withOpacity(0.6),
                                     fontWeight: FontWeight.w700,
@@ -279,7 +271,7 @@ class _HomePageState extends State<HomePage> {
                                   Wrap(
                                     children: [
                                       Text(
-                                        "I'm a freelancer based in Nashik, IN specializing in \nbuilding (and occasionally designing) exceptional websites, \napplications, and everything in between.",
+                                        "I'm a mobile application developer, specializing in \nbuilding (and occasionally designing) exceptional websites, \napplications, and everything in between.",
                                         style: TextStyle(
                                           color: Colors.grey,
                                           fontSize: 16.0,
@@ -330,8 +322,6 @@ class _HomePageState extends State<HomePage> {
                                 ],
                               ),
 
-                              
-
                               //About Me
                               _wrapScrollTag(
                                 index: 0,
@@ -342,10 +332,7 @@ class _HomePageState extends State<HomePage> {
                               ),
 
                               //Where I've Worked
-                              _wrapScrollTag(
-                                index: 1,
-                                child:Work()
-                              ),
+                              _wrapScrollTag(index: 1, child: Work()),
                               SizedBox(
                                 height: size.height * 0.10,
                               ),

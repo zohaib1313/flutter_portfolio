@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:potrtfolio/UI/HomePage.dart';
 import 'package:potrtfolio/UI/MobileHome.dart';
@@ -12,10 +13,13 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        if (constraints.maxWidth >= 1000) {
-          return HomePage();
+        print(constraints.maxWidth);
+        if (constraints.maxWidth <= 780) {
+          return Container(
+            color: Colors.red,
+          );
         } else {
-          return MobileHome();
+          return HomePage();
         }
       },
     );
